@@ -1,8 +1,8 @@
-#setwd("~/GitHub//ExData_Plotting1")
+#setwd("~/GitHub/ExData_Plotting1")
 
 initial=read.table("household_power_consumption.txt",header=T,sep=";",nrows=10,na.strings="?")
 class1=sapply(initial,class)
-epdata=read.table("~/data/household_power_consumption.txt",header=T,sep=";",nrows=2075259,na.strings="?",colClasses=class1)
+epdata=read.table("household_power_consumption.txt",header=T,sep=";",nrows=2075259,na.strings="?",colClasses=class1)
 # names(epdata)
 
 epdata=within(epdata,{
@@ -48,7 +48,7 @@ with(epdatasubset,{
   plot(Time,Sub_metering_1,type="l",xlab="",ylab="Energy sub metering")
   lines(Time,Sub_metering_2,col=2)
   lines(Time,Sub_metering_3,col=4)
-  legend("topright",legend=paste("Sub metering",1:3),lty=1,col=c(1,2,4),bty="n")
+  legend("topright",legend=paste("Sub_metering_",1:3,sep=""),lty=1,col=c(1,2,4),bty="n")
   
   #4th plot
   plot(Time,Global_reactive_power,xlab="datetime")

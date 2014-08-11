@@ -2,7 +2,7 @@
 
 initial=read.table("household_power_consumption.txt",header=T,sep=";",nrows=10,na.strings="?")
 class1=sapply(initial,class)
-epdata=read.table("~/data/household_power_consumption.txt",header=T,sep=";",nrows=2075259,na.strings="?",colClasses=class1)
+epdata=read.table("household_power_consumption.txt",header=T,sep=";",nrows=2075259,na.strings="?",colClasses=class1)
 # names(epdata)
 
 epdata=within(epdata,{
